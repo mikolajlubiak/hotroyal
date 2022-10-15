@@ -1,23 +1,29 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Sprites/ammoo.png" type="Texture" id=1]
-[ext_resource path="res://Bullet.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/bullet.png" type="Texture" id=1]
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 4.75771
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 4, 8.5 )
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 5, 9.5 )
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-script = ExtResource( 2 )
+[node name="Bullet" type="RigidBody2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
-rotation = 1.5708
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 76.704, 3 )
+scale = Vector2( 2.15162, 0.446 )
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
-position = Vector2( -29, -4 )
-rotation = 1.56945
-scale = Vector2( 1.04628, 1.25735 )
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 100, 7 )
+rotation = -1.5708
 texture = ExtResource( 1 )
-region_rect = Rect2( 770, 800, 70, 100 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 69.733, 15.448 )
+scale = Vector2( 1.726, 0.454 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 4, -27.5 )
+shape = SubResource( 2 )

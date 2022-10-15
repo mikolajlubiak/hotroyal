@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/swp.png-4d1d26bd4e39e584abdca30f22ad14a6.stex"
+path="res://.import/light.png-bf179afb193a5d6b9a4b9af8792c7faf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/swp.png"
-dest_files=[ "res://.import/swp.png-4d1d26bd4e39e584abdca30f22ad14a6.stex" ]
+source_file="res://Sprites/light.png"
+dest_files=[ "res://.import/light.png-bf179afb193a5d6b9a4b9af8792c7faf.stex" ]
 
 [params]
 

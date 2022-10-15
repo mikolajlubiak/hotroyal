@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/trawa.png-a895dc918dbb6ce7d571f20078695b19.stex"
+path="res://.import/weapon.png-b970ad40c1075c9038d53e7fba800e1b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/trawa.png"
-dest_files=[ "res://.import/trawa.png-a895dc918dbb6ce7d571f20078695b19.stex" ]
+source_file="res://Sprites/weapon.png"
+dest_files=[ "res://.import/weapon.png-b970ad40c1075c9038d53e7fba800e1b.stex" ]
 
 [params]
 
