@@ -1,6 +1,8 @@
 extends KinematicBody2D
 
 export (int) var speed = 200
+export var bullet_speed = 1000
+export var fire_rate = 0.2
 
 var velocity = Vector2()
 
