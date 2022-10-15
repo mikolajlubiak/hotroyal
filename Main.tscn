@@ -56,10 +56,8 @@ script = ExtResource( 4 )
 [node name="Light2D" type="Light2D" parent="Player"]
 position = Vector2( -1, 2 )
 texture = ExtResource( 7 )
-offset = Vector2( 13, 228 )
-texture_scale = 2.0
 color = Color( 1, 0.878431, 0.0745098, 1 )
-energy = 0.8
+energy = 0.5
 shadow_enabled = true
 shadow_buffer_size = 4096
 shadow_filter_smooth = 64.0
