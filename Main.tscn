@@ -66,13 +66,8 @@ texture = ExtResource( 2 )
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2( 2, 1 )
 current = true
-<<<<<<< HEAD
-smoothing_enabled = true
-smoothing_speed = 10.0
-=======
 zoom = Vector2( 0.6, 0.6 )
 smoothing_enabled = true
->>>>>>> 3cf60f3ea2ba3054634c2645b8ebd46eb0d5abd1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2( 0, 1.5 )
