@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Sprites/broń-podstawa.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/swp.png" type="Texture" id=2]
-[ext_resource path="res://movementplayer.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/trawa.png" type="Texture" id=3]
+[ext_resource path="res://Player/movementplayer.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 52.7215, 68.453 )
@@ -14,16 +15,18 @@ z_as_relative = false
 [node name="otoczenie" type="Node2D" parent="."]
 
 [node name="Trawa3" type="Sprite" parent="otoczenie"]
-position = Vector2( 1004, 319 )
+position = Vector2( 1001, 319 )
+texture = ExtResource( 3 )
 
 [node name="Trawa2" type="Sprite" parent="otoczenie"]
 position = Vector2( 330, 319 )
+texture = ExtResource( 3 )
 
 [node name="Player" type="Node2D" parent="."]
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="Player"]
 position = Vector2( 539, 334 )
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 
 [node name="Broń-podstawa" type="Sprite" parent="Player/KinematicBody2D"]
 position = Vector2( 34.9999, -6 )
