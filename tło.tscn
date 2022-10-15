@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://trawa.png" type="Texture" id=1]
 [ext_resource path="res://postać2d.png" type="Texture" id=2]
 [ext_resource path="res://movementplayer.gd" type="Script" id=3]
+[ext_resource path="res://broń-podstawa.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 52.7215, 68.453 )
@@ -29,6 +30,11 @@ script = ExtResource( 3 )
 position = Vector2( 0, 1 )
 rotation = 1.56962
 texture = ExtResource( 2 )
+
+[node name="Broń-podstawa" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( 34.9999, -6 )
+rotation = 1.60655
+texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
 position = Vector2( 0, 0.500031 )
