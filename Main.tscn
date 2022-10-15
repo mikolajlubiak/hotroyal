@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Sprites/player.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/weapon.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/grass.png" type="Texture" id=3]
 [ext_resource path="res://movement.gd" type="Script" id=4]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://wall.tres" type="TileSet" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 36.4995, 55.7176 )
@@ -40,6 +41,12 @@ texture = ExtResource( 3 )
 [node name="grass6" type="Sprite" parent="Node2D"]
 position = Vector2( 1300, 0 )
 texture = ExtResource( 3 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 1, 1 )
+format = 1
+tile_data = PoolIntArray( -25231046, -1610612736, 0, 16385012, -1610612736, 0, 33947310, -1610612736, 0, 62587475, -1610612736, 0 )
 
 [node name="Player" type="KinematicBody2D" parent="."]
 position = Vector2( 539, 334 )
