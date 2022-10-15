@@ -18,30 +18,45 @@ extents = Vector2( 20, 24 )
 position = Vector2( 6, -10 )
 z_as_relative = false
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Ground" type="Node2D" parent="."]
 
-[node name="grass" type="Sprite" parent="Node2D"]
+[node name="grass" type="Sprite" parent="Ground"]
 texture = ExtResource( 3 )
 
-[node name="grass2" type="Sprite" parent="Node2D"]
+[node name="grass2" type="Sprite" parent="Ground"]
 position = Vector2( 650, 0 )
 texture = ExtResource( 3 )
 
-[node name="grass3" type="Sprite" parent="Node2D"]
+[node name="grass3" type="Sprite" parent="Ground"]
 position = Vector2( 0, 600 )
 texture = ExtResource( 3 )
 
-[node name="grass4" type="Sprite" parent="Node2D"]
+[node name="grass4" type="Sprite" parent="Ground"]
 position = Vector2( 650, 600 )
 texture = ExtResource( 3 )
 
-[node name="grass5" type="Sprite" parent="Node2D"]
+[node name="grass5" type="Sprite" parent="Ground"]
 position = Vector2( 1300, 600 )
 texture = ExtResource( 3 )
 
-[node name="grass6" type="Sprite" parent="Node2D"]
+[node name="grass6" type="Sprite" parent="Ground"]
 position = Vector2( 1300, 0 )
 texture = ExtResource( 3 )
+
+[node name="Map" type="Node2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="Map"]
+position = Vector2( -1, -2 )
+scale = Vector2( 0.5, 0.5 )
+tile_set = ExtResource( 6 )
+format = 1
+tile_data = PoolIntArray( -1245213, -1073741824, 0, -1245204, -1073741824, 0, -1245195, -1073741824, 0, -1245186, -1073741824, 0, -1310713, -1073741824, 0, -1310704, -1073741824, 0, -1310688, -1073741824, 0, -1310679, -1073741824, 0, -1310670, -1073741824, 0, -1310661, -1073741824, 0, -1310660, -1073741824, 0, -1245125, -1073741824, 0, -589853, -1073741824, 0, -589844, -1073741824, 0, -655309, -1073741824, 0, -655300, -1073741824, 0, 51, -1073741824, 0, 60, -1073741824, 0, 589795, -1073741824, 0, 589804, -1073741824, 0, 655411, -1073741824, 0, 655420, -1073741824, 0, 1245155, -1073741824, 0, 1245164, -1073741824, 0, 1900515, -1073741824, 0, 1900517, -1073741824, 0, 1900526, -1073741824, 0, 1900534, -1073741824, 0, 1900535, 0, 0, 1900543, -1073741824, 0, 1835009, 0, 0, 1835016, -1073741824, 0, 1835019, 0, 0, 1835025, -1073741824, 0, 1835029, 0, 0, 1835034, -1073741824, 0, 1835039, 0, 0, 1835043, -1073741824, 0, 1835049, 0, 0, 1835052, -1073741824, 0, 1835059, -1073741824, 0, 1835068, -1073741824, 0 )
+
+[node name="TileMap2" type="TileMap" parent="Map"]
+scale = Vector2( 0.1, 0.1 )
+tile_set = ExtResource( 6 )
+format = 1
+tile_data = PoolIntArray( -3145626, -1073741824, 0, -2490266, -1073741824, 0, -1834906, -1073741824, 0, -1179546, -1073741824, 0, -524186, -1073741824, 0, 180, -1073741824, 0, 189, -1073741824, 0, 198, -1073741824, 0, 204, -1073741824, 0, 208, -1073741824, 0, 217, -1073741824, 0, 226, -1073741824, 0, 235, -1073741824, 0, 244, -1073741824, 0, 246, -1073741824, 0, 131174, -1073741824, 0, 655540, -1073741824, 0, 786534, -1073741824, 0, 1310900, -1073741824, 0, 1966260, -1073741824, 0, 2621620, -1073741824, 0, 3276971, -1073741824, 0, 3276980, -1073741824, 0, 3866572, -1073741824, 0, 3866581, -1073741824, 0, 3866590, -1073741824, 0, 3866599, -1073741824, 0, 3866608, -1073741824, 0, 3866617, -1073741824, 0, 3801090, -1073741824, 0, 3801099, -1073741824, 0, 4718763, -1073741824, 0, 4718772, -1073741824, 0, 5177402, -1073741824, 0, 5374132, -1073741824, 0, 5832762, -1073741824, 0, 6029492, -1073741824, 0, 6029501, -1073741824, 0, 6029508, -1073741824, 0, 6029511, -1073741824, 0, 6029517, -1073741824, 0, 6029521, -1073741824, 0, 6029530, -1073741824, 0, 6029539, -1073741824, 0, 6029548, -1073741824, 0, 6029557, -1073741824, 0, 6029559, 1610612736, 0, 6488122, -1073741824, 0, 7143482, -1073741824, 0, 7798842, -1073741824, 0, 8454202, -1073741824, 0, 8585274, -1073741824, 0 )
 
 [node name="Player" type="KinematicBody2D" parent="."]
 position = Vector2( 539, 334 )
@@ -85,11 +100,34 @@ shape = SubResource( 2 )
 
 [node name="Enemy" parent="." instance=ExtResource( 5 )]
 
-[node name="TileMap" type="TileMap" parent="."]
-position = Vector2( -1, -2 )
-scale = Vector2( 0.5, 0.5 )
-tile_set = ExtResource( 6 )
-format = 1
-tile_data = PoolIntArray( -1245213, -1073741824, 0, -1245204, -1073741824, 0, -1245195, -1073741824, 0, -1245186, -1073741824, 0, -1310713, -1073741824, 0, -1310704, -1073741824, 0, -1310688, -1073741824, 0, -1310679, -1073741824, 0, -1310670, -1073741824, 0, -1310661, -1073741824, 0, -1310660, -1073741824, 0, -1245125, -1073741824, 0, -589853, -1073741824, 0, -589844, -1073741824, 0, -655309, -1073741824, 0, -655300, -1073741824, 0, 51, -1073741824, 0, 60, -1073741824, 0, 589795, -1073741824, 0, 589804, -1073741824, 0, 655411, -1073741824, 0, 655420, -1073741824, 0, 1245155, -1073741824, 0, 1245164, -1073741824, 0, 1900515, -1073741824, 0, 1900517, -1073741824, 0, 1900526, -1073741824, 0, 1900534, -1073741824, 0, 1900535, 0, 0, 1900543, -1073741824, 0, 1835009, 0, 0, 1835016, -1073741824, 0, 1835019, 0, 0, 1835025, -1073741824, 0, 1835029, 0, 0, 1835034, -1073741824, 0, 1835039, 0, 0, 1835043, -1073741824, 0, 1835049, 0, 0, 1835052, -1073741824, 0, 1835059, -1073741824, 0, 1835068, -1073741824, 0 )
+[node name="Enemy2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 504, -30 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 5 )]
+position = Vector2( -220, 292 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 212, 779 )
+
+[node name="Enemy5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 13, 567 )
+
+[node name="Enemy6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 572, 745 )
+
+[node name="Enemy7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1004, 643 )
+
+[node name="Enemy8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1292, 334 )
+
+[node name="Enemy9" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1273, -100 )
+
+[node name="Enemy10" parent="." instance=ExtResource( 5 )]
+position = Vector2( 877, -115 )
+
+[node name="Enemy11" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1496, 414 )
 
 [connection signal="body_entered" from="Player/Area2D" to="Player" method="_on_Area2D_body_entered"]
