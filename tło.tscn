@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="BitmapFont" id=1]
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 21.8628, 14.8 )
+theme = SubResource( 2 )
