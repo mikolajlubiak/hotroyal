@@ -1,8 +1,13 @@
 extends KinematicBody2D
 
 export (int) var speed = 200
-export var bullet_speed = 1000
-export var fire_rate = 0.2
+const bulletPath = preload('res://Bullet.tscn')
+func shoot():
+	var bullet = bulletPath.instance()
+	get_parent().add_child(bullet)
+	bullet.position = $Position2D.position
+	
+
 
 var velocity = Vector2()
 

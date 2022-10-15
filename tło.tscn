@@ -47,3 +47,9 @@ texture = ExtResource( 2 )
 position = Vector2( 0, 0.500031 )
 scale = Vector2( 0.493156, -0.314084 )
 shape = SubResource( 1 )
+
+[node name="Position2D" type="Position2D" parent="Player/KinematicBody2D"]
+position = Vector2( 70, 3 )
+__meta__ = {
+"_gizmo_extents_": 21.9
+}
