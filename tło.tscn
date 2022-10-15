@@ -26,6 +26,12 @@ texture = ExtResource( 1 )
 position = Vector2( 539, 334 )
 script = ExtResource( 3 )
 
+[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
+position = Vector2( 2, 1 )
+current = true
+smoothing_enabled = true
+smoothing_speed = 10.0
+
 [node name="Sprite" type="Sprite" parent="KinematicBody2D"]
 position = Vector2( 0, 1 )
 rotation = 1.56962
