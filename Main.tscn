@@ -83,7 +83,14 @@ shape = SubResource( 2 )
 [node name="Enemy" parent="." instance=ExtResource( 5 )]
 
 [node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 617, 581 )
 texture = ExtResource( 7 )
-offset = Vector2( 500, 500 )
+offset = Vector2( 13, 228 )
+texture_scale = 1.8
+color = Color( 1, 0.878431, 0.0745098, 1 )
+energy = 0.9
+shadow_enabled = true
+shadow_buffer_size = 4096
+shadow_gradient_length = 5.0
 
 [connection signal="body_entered" from="Player/Area2D" to="Player" method="_on_Area2D_body_entered"]
