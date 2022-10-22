@@ -1,4 +1,5 @@
 extends KinematicBody2D
+extends Node
 
 var motion = Vector2()
 
@@ -14,21 +15,18 @@ func _physics_process(delta):
 func spawn():
 	var rand = RandomNumberGenerator.new()
 	var enemyscene = load("res://Enemy.tscn")
-
 	var screen_size = get_viewport().get_visible_rect().size
-
 	var enemy = enemyscene.instance()
+
+spawn()
+
+func _on_Area2D_body_entered(body):
+	if "Bullet" in body.name:
+	queue_free()
 	rand.randomize()
 	var x = rand.randf_range(0, screen_size.x)
-
 	rand.randomize()
 	var y = rand.randf_range(0, screen_size.y)
 	enemy.position.y = y
 	enemy.position.x = x
 	add_child(enemy)
-
-
-func _on_Area2D_body_entered(body):
-	if "Bullet" in body.name:
-		spawn()
-		queue_free()
