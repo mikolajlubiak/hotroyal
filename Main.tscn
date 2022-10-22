@@ -98,38 +98,36 @@ shape = SubResource( 1 )
 position = Vector2( 0, 1 )
 shape = SubResource( 2 )
 
-[node name="Enemy" type="Node2D" parent="."]
-
-[node name="Enemy6" parent="Enemy" instance=ExtResource( 5 )]
+[node name="Enemy6" parent="." instance=ExtResource( 5 )]
 position = Vector2( 572, 745 )
 
-[node name="Enemy" parent="Enemy" instance=ExtResource( 5 )]
+[node name="Enemy2" parent="." instance=ExtResource( 5 )]
 
-[node name="Enemy2" parent="Enemy" instance=ExtResource( 5 )]
+[node name="Enemy3" parent="." instance=ExtResource( 5 )]
 position = Vector2( 504, -30 )
 
-[node name="Enemy3" parent="Enemy" instance=ExtResource( 5 )]
+[node name="Enemy4" parent="." instance=ExtResource( 5 )]
 position = Vector2( -220, 292 )
 
-[node name="Enemy4" parent="Enemy" instance=ExtResource( 5 )]
+[node name="Enemy5" parent="." instance=ExtResource( 5 )]
 position = Vector2( 212, 779 )
 
-[node name="Enemy5" parent="Enemy" instance=ExtResource( 5 )]
+[node name="Enemy7" parent="." instance=ExtResource( 5 )]
 position = Vector2( 13, 567 )
 
-[node name="Enemy7" parent="Enemy" instance=ExtResource( 5 )]
+[node name="Enemy8" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1004, 643 )
 
-[node name="Enemy8" parent="Enemy" instance=ExtResource( 5 )]
+[node name="Enemy9" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1292, 334 )
 
-[node name="Enemy9" parent="Enemy" instance=ExtResource( 5 )]
+[node name="Enemy10" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1273, -100 )
 
-[node name="Enemy10" parent="Enemy" instance=ExtResource( 5 )]
+[node name="Enemy11" parent="." instance=ExtResource( 5 )]
 position = Vector2( 877, -115 )
 
-[node name="Enemy11" parent="Enemy" instance=ExtResource( 5 )]
+[node name="Enemy12" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1496, 414 )
 
 [connection signal="body_entered" from="Player/Area2D" to="Player" method="_on_Area2D_body_entered"]
