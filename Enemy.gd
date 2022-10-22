@@ -6,10 +6,6 @@ var enemyscene = load("res://Enemy.tscn")
 var screen_size = get_viewport().get_visible_rect().size
 var enemy = enemyscene.instance()
 
-var t = Timer.new()
-t.set_wait_time(3)
-t.set_one_shot(true)
-
 func _ready():
 	pass # Replace with function body.
 
@@ -23,6 +19,9 @@ func _on_Area2D_body_entered(body):
 	if "Bullet" in body.name:
 		queue_free()
 
+		var t = Timer.new()
+		t.set_wait_time(3)
+		t.set_one_shot(true)
 		self.add_child(t)
 		t.start()
 		yield(t, "timeout")
