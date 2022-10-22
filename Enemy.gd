@@ -1,5 +1,4 @@
-extends KinematicBody2D
-extends Node
+extends KinematicBody2D, Node
 
 var motion = Vector2()
 
