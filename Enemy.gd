@@ -11,25 +11,28 @@ func _physics_process(delta):
 	look_at(Player.position)
 	move_and_collide(motion)
 
+func spawn():
+	var t = Timer.new()
+	t.set_wait_time(3)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
+
+	var rand = RandomNumberGenerator.new()
+	var enemyscene = load("res://Enemy.tscn")
+	var screen_size = get_viewport().get_visible_rect().size
+	var enemy = enemyscene.instance()
+	rand.randomize()
+	var x = rand.randf_range(0, screen_size.x)
+	rand.randomize()
+	var y = rand.randf_range(0, screen_size.y)
+	enemy.position.y = y
+	enemy.position.x = x
+	add_child(enemy)
+
 func _on_Area2D_body_entered(body):
 	if "Bullet" in body.name:
+		spawn()
 		queue_free()
 
-		var t = Timer.new()
-		t.set_wait_time(3)
-		t.set_one_shot(true)
-		self.add_child(t)
-		t.start()
-		yield(t, "timeout")
-
-		var rand = RandomNumberGenerator.new()
-		var enemyscene = load("res://Enemy.tscn")
-		var screen_size = get_viewport().get_visible_rect().size
-		var enemy = enemyscene.instance()
-		rand.randomize()
-		var x = rand.randf_range(0, screen_size.x)
-		rand.randomize()
-		var y = rand.randf_range(0, screen_size.y)
-		enemy.position.y = y
-		enemy.position.x = x
-		add_child(enemy)
