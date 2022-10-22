@@ -16,3 +16,8 @@ func _ready():
 		enemy.position.y = y
 		enemy.position.x = x 
 		add_child(enemy)
+	
+func _on_Area2D_body_entered(body):
+	if "Bullet" in body.name:
+		queue_free()
+	
