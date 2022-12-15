@@ -67,7 +67,7 @@ position = Vector2( 539, 334 )
 script = ExtResource( 6 )
 
 [node name="Light2D" type="Light2D" parent="Player"]
-position = Vector2( -1, 2 )
+position = Vector2( 3, 9 )
 texture = ExtResource( 5 )
 color = Color( 1, 0.878431, 0.0745098, 1 )
 energy = 0.5
@@ -80,11 +80,6 @@ position = Vector2( 0, 1 )
 rotation = 1.56962
 texture = ExtResource( 4 )
 
-[node name="weapon" type="Sprite" parent="Player"]
-position = Vector2( 35, 3 )
-rotation = 1.5708
-texture = ExtResource( 2 )
-
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2( 2, 1 )
 current = true
@@ -95,6 +90,11 @@ smoothing_speed = 10.0
 position = Vector2( 0, 1.5 )
 scale = Vector2( 0.493156, -0.314084 )
 shape = SubResource( 1 )
+
+[node name="weapon" type="Sprite" parent="Player"]
+position = Vector2( 41, 2 )
+scale = Vector2( 0.211906, 0.211906 )
+texture = ExtResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="Player"]
 
